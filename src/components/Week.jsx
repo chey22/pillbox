@@ -17,7 +17,7 @@ const Week = () => {
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
+          <th scope="row">AM</th>
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
@@ -26,16 +26,10 @@ const Week = () => {
           <td>@mdo</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
+          <th scope="row">PM</th>
           <td>Jacob</td>
           <td>Thornton</td>
           <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
         </tr>
       </tbody>
     </table>
