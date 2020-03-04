@@ -1,7 +1,16 @@
 import React from "react";
+import Week from "./Week";
+import Meds from "./Meds";
+
 
 const App = () => {
-  return <h1>OKAY!</h1>
-};
+  return (
+    <React.Fragment>
+      <h1>WEEKLY VIEW</h1>
+      <Week />
+      <Meds />
+
+    </React.Fragment>
+  )};
 
 export default App;
