@@ -16,20 +16,95 @@ const Week = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr className="AM">
           <th scope="row">AM</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
         </tr>
-        <tr>
+        <tr className="PM">
           <th scope="row">PM</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
+          <td>
+            <p>Med1</p>
+            <p>Med2</p>
+            <p>Med3</p>
+            <p>Med4</p>
+          </td>
         </tr>
       </tbody>
     </table>
