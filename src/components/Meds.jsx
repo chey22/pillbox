@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Meds = () => {
   return (
@@ -11,7 +11,7 @@ const Meds = () => {
           <h5 className="card-title">Med1</h5>
           <p className="card-text">Dosage</p>
           <p className="card-text">Frequency</p>
-          <a href="#" className="btn btn-primary">
+          <a href="https://" className="btn btn-primary">
             More details
           </a>
         </div>
@@ -23,7 +23,7 @@ const Meds = () => {
           <h5 className="card-title">Med2</h5>
           <p className="card-text">Dosage</p>
           <p className="card-text">Frequency</p>
-          <a href="#" className="btn btn-primary">
+          <a href="https://" className="btn btn-primary">
             More details
           </a>
         </div>
@@ -35,7 +35,7 @@ const Meds = () => {
           <h5 className="card-title">Med3</h5>
           <p className="card-text">Dosage</p>
           <p className="card-text">Frequency</p>
-          <a href="#" className="btn btn-primary">
+          <a href="https://" className="btn btn-primary">
             More details
           </a>
         </div>
@@ -47,7 +47,7 @@ const Meds = () => {
           <h5 className="card-title">Med4</h5>
           <p className="card-text">Dosage</p>
           <p className="card-text">Frequency</p>
-          <a href="#" className="btn btn-primary">
+          <a href="https://" className="btn btn-primary">
             More details
           </a>
         </div>

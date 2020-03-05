@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Button, Nav, Form, FormControl } from "react-bootstrap";
-import Meds from "./Meds";
+// import Meds from "./Meds";
 
 class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        <a className="navbar-brand" href="#"></a>
+        <a className="navbar-brand" href="https://"></a>
         <button
           className="navbar-toggler"
           type="button"

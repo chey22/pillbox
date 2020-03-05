@@ -12,7 +12,7 @@ const SingleMed = () => {
         <p className="card-text">Shape</p>
         <p className="card-text">Instructions</p>
         <p className="card-text">Warnings</p>
-        <a href="#" className="btn btn-primary">
+        <a href="https://" className="btn btn-primary">
           More details - links to drugs.com
         </a>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Doctors = () => {
     return (
@@ -11,7 +11,7 @@ const Doctors = () => {
             <p className="card-text">Phone number</p>
             <p>Address</p>
             <p>Fax</p>
-            <a href="#" className="btn btn-primary">
+            <a href="https://" className="btn btn-primary">
               More details - links to office website
             </a>
           </div>
@@ -26,7 +26,7 @@ const Doctors = () => {
             <p className="card-text">Phone number</p>
             <p>Address</p>
             <p>Fax</p>
-            <a href="#" className="btn btn-primary">
+            <a href="https://" className="btn btn-primary">
               More details - links to office website
             </a>
           </div>
