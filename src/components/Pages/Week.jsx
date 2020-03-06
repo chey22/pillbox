@@ -2,7 +2,7 @@ import React from "react";
 
 const Week = () => {
   return (
-    <table class="table">
+    <table className="table">
       <thead>
         <tr>
           <th scope="col"></th>

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from "./Navbar"
+import Navigation from "./Navbar"
 import Home from "./Pages/Home";
 import Week from "./Pages/Week";
 import Day from "./Pages/Day";
@@ -14,7 +14,7 @@ import Pharmacies from "./Pages/Pharmacies"
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <Navigation />
       <Switch>
         <Route exact path="/Week" component={Week} />
         <Route exact path="/Day" component={Day} />

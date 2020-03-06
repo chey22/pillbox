@@ -1,105 +1,78 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Button, Nav, Form, FormControl } from "react-bootstrap";
+import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from "react-bootstrap";
 // import Meds from "./Meds";
 
-class Navbar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        <a className="navbar-brand" href="https://"></a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+let Navigation = () => {
+  console.log(window.location.pathname)
+  const [view, setView] = useState()
 
-        <div className="collapse navbar-collapse" id="navbarColor01">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="/Home" className="nav-link">
-                  PILLBOX<span className="sr-only">(current)</span>
-                </Link>
-              </Button>
-            </li>
-            <li className="nav-item">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="/Week" className="nav-link">
-                  Weekly View
-                </Link>
-              </Button>
-            </li>
-            <li className="nav-item">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="/Day" className="nav-link">
-                  Daily View
-                </Link>
-              </Button>
-            </li>
-            <li className="nav-item">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="/Meds" className="nav-link">
-                  My Medications
-                </Link>
-              </Button>
-            </li>
-            <li className="nav-item">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="/SingleMeds" className="nav-link">
-                  Medication Details
-                </Link>
-              </Button>
-            </li>
-            <li className="nav-item">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="/Doctors" className="nav-link" href="#">
-                  My Doctors
-                </Link>
-              </Button>
-            </li>
-            <li className="nav-item">
-              <Button variant="secondary" size="sm" className="btn mr-3">
-                <Link to="Pharmacies" className="nav-link" href="#">
-                  My Pharmacies
-                </Link>
-              </Button>
-            </li>
-          </ul>
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case "/Week":
+        setView("Weekly View");
+        break;
+      case "/Day":
+        setView("Daily View");
+        break;
+      default:
+        setView("View");
+        break;
+    }
+  }, [])
 
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
+  return (
+    <Navbar bg="info" expand="lg" variant="dark">
+      <Navbar.Brand href="/">Logo</Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
-      // {/* <Navbar bg="primary" variant="dark">
-      //     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-      //     <Nav className=f"mr-auto">
-      //       <Nav.Link href="#home">Home</Nav.Link>
-      //       <Nav.Link href="#features">Features</Nav.Link>
-      //       <Nav.Link href="#pricing">Pricing</Nav.Link>
-      //     </Nav>
-      //     <Form inline>
-      //       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      //       <Button variant="outline-light">Search</Button>
-      //     </Form>
-      //   </Navbar> */}
-    );
-  }
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          <h5 className="my-auto mr-3">
+            <Nav.Link href="/Meds" className="bg-dark rounded text-light">
+              My Medications
+            </Nav.Link>
+          </h5>
+
+          <h5 className="my-auto mr-3">
+            <Nav.Link href="/SingleMeds" className="bg-dark rounded text-light">
+              Medication Details
+            </Nav.Link>
+          </h5>
+
+          <h5 className="my-auto mr-3">
+            <NavDropdown title={<span className="text-light">{view}</span>} id="collasible-nav-dropdown"
+              className="bg-dark rounded">
+              <NavDropdown.Item href="/Week">Weekly View</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/Day">Daily View</NavDropdown.Item>
+            </NavDropdown>
+          </h5>
+
+          <h5 className="my-auto mr-3">
+            <Nav.Link href="/Doctors" className="bg-dark rounded text-light">
+              My Doctors
+            </Nav.Link>
+          </h5>
+
+          <h5 className="my-auto mr-3">
+            <Nav.Link href="/Pharmacies" className="bg-dark rounded text-light">
+              My Pharmacies
+            </Nav.Link>
+          </h5>
+
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <div className="bg-dark rounded">
+            <Button variant="outline-success">Search</Button>
+          </div>
+        </Form>
+      </Navbar.Collapse>
+
+
+    </Navbar>
+  );
 }
 
-export default Navbar;
+export default Navigation;
