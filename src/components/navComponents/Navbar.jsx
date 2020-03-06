@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from "react-bootstrap";
+import Title from './title'
 
 let Navigation = () => {
   const [view, setView] = useState()
-  const [navlink, setNavlink] = useState([])
 
   useEffect(() => {
-    const contents = [{ content1: "/Meds", content2: "My Medications" },
-    { content1: "/SingleMeds", content2: "Medication Details" },
-    { content1: "/Doctors", content2: "My Doctors" },
-    { content1: "/Pharmacies", content2: "My Pharmacies" }]
-
     switch (window.location.pathname) {
       case "/Week":
         setView("Weekly View");
@@ -22,22 +17,7 @@ let Navigation = () => {
         setView("View");
         break;
     }
-
-    let navmaker = () => {
-      let arr = contents.map((element) => {
-        return (
-          <h5 className="my-auto mr-3">
-            <Nav.Link href={element.content1} className="bg-dark rounded text-light my-1">
-              {element.content2}
-            </Nav.Link>
-          </h5>
-        )
-      })
-
-      setNavlink(arr)
-    }
-
-    navmaker()
+    
   }, [])
 
   return (
@@ -47,9 +27,10 @@ let Navigation = () => {
 
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          {navlink[0]}
 
-          {navlink[1]}
+          <Title content1="/Meds" content2="My Medications" />
+
+          <Title content1="/SingleMeds" content2="Medication Details" />
 
           <h5 className="my-auto mr-3">
             <NavDropdown title={<span className="text-light">{view}</span>} id="collasible-nav-dropdown"
@@ -60,9 +41,9 @@ let Navigation = () => {
             </NavDropdown>
           </h5>
 
-          {navlink[2]}
+          <Title content1="/Doctors" content2="My Doctors" />
 
-          {navlink[3]}
+          <Title content1="/Pharmacies" content2="My Pharmacies" />
 
         </Nav>
         <Form inline>
