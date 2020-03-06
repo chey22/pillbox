@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from "./Navbar"
+import Navigation from "./navComponents/Navbar"
 import Home from "./Pages/Home";
 import Week from "./Pages/Week";
 import Day from "./Pages/Day";
