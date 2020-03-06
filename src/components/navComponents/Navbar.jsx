@@ -28,6 +28,7 @@ let Navigation = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
 
+          <Title content1="/" content2="Home"/>
           <Title content1="/Meds" content2="My Medications" />
 
           <Title content1="/SingleMeds" content2="Medication Details" />
