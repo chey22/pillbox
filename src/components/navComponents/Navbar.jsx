@@ -22,7 +22,7 @@ let Navigation = () => {
 
   return (
     <Navbar bg="info" expand="lg" variant="dark">
-      <Navbar.Brand href="/">Logo</Navbar.Brand>
+      <Navbar.Brand href="/"><img src="/Images/logo.png" alt="/" height="55em"/></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
       <Navbar.Collapse id="responsive-navbar-nav">
